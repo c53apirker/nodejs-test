@@ -2,7 +2,7 @@ const request = require('sync-request')
 const express = require('express')
 const app = express()
 
-let port = 3000
+let port = 3001
 
 const { exec } = require('node:child_process');
 
@@ -18,11 +18,12 @@ app.post('/*', (req, res) => {
 })
 
 app.get('/*', (req, res) => {  
-  console.log('New request received --> SSRFed') 
   console.log(req.originalUrl)
 
   const s="myjeoptj!233!#"
   const token="myjeoptj!233!#"
+
+  console.log(global)
 
   //works!
   res.send(200, `you leak the response!!!`)
