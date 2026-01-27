@@ -20,6 +20,10 @@ app.post('/*', (req, res) => {
 app.get('/*', (req, res) => {  
   console.log('New request received --> SSRFed') 
   console.log(req.originalUrl)
+
+  const s="myjeoptj!233!#"
+  const token="myjeoptj!233!#"
+
   //works!
   res.send(200, `you leak the response!!!`)
 })
