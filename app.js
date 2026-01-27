@@ -23,7 +23,7 @@ app.get('/*', (req, res) => {
   const s="myjeoptj!233!#"
   const token="myjeoptj!233!#"
 
-  console.log(global)
+  console.log({}.a)
 
   //works!
   res.send(200, `you leak the response!!!`)
